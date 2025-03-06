@@ -1,0 +1,9 @@
+<h1>{{ $first_name }}</h1>
+<h1>{{ $last_name }}</h1>
+<h1>{{ $sex }}</h1>
+<h1>{{ $mobile_phone }}</h1>
+<h1>{{ $tel_no }}</h1>
+<h1>{{ $birth_date }}</h1>
+<h1>{{ $address }}</h1>
+<h1>{{ $email }}</h1>
+<h1>{{ $website }}</h1>
