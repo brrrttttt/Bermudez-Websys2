@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::resource('products', ProductController::class);
+Route::post('/products/{product}/update-quantity', [ProductController::class, 'updateQuantity'])->name('products.updateQuantity');

@@ -104,7 +104,16 @@
                                     <td>{{ $product->id }}</td>
                                     <td>{{ $product->name }}</td>
                                     <td>₱{{ number_format($product->price, 2) }}</td>
-                                    <td>{{ $product->stock_quantity }}</td>
+                                    <td>
+                                    <form action="{{ route('products.updateQuantity', $product) }}" method="POST" class="d-flex align-items-center" style="gap: 5px;">
+                                    @csrf
+                                    <input type="number" name="stock_quantity" value="{{ $product->stock_quantity }}" min="0"
+                                    class="form-control form-control-sm" style="width: 80px;">
+                                    <button type="submit" class="btn btn-sm btn-success" title="Save">
+                                    <i class="bi bi-check2"></i>
+                                    </button>
+                                    </form>
+                                    </td>
                                     <td class="text-center action-btns">
                                         <a href="{{ route('products.show', $product) }}" class="btn btn-info btn-sm me-1" title="View"><i class="bi bi-eye"></i></a>
                                         <a href="{{ route('products.edit', $product) }}" class="btn btn-warning btn-sm me-1" title="Edit"><i class="bi bi-pencil-square"></i></a>
